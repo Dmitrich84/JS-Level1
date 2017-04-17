@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <h1>Домашнее задание к уроку 2</h1>
+</head>
+
+<body>
+
+  <script>
+  /*
+  Задание 1
+  2sad = 'This is Sparta!!!'  - переменная не должна начинаться с цифр, нету ключевого слова var, нету ";" в конце строки
+  result = "true"; - нету ключевого слова var, значение true - логический тип, неясно зачем ковычки
+  var %entage = 20; - ошибка в имени переменной, не может начинаться с символа %
+  var header = "Заголовок новой статьи'; - разные ковычки в значении переменной
+  zip code = 983456  - не правильное название переменной (2 слова в названии), нету ";" в конце строки
+  Prompt('Введите хоть что-нибудь') - нету такой функции, имя функции должно быть с маленькой буквы, нету ";" в конце строки
+  Alert 'Вы точно все ввели?' - нету такой функции, имя функции должно быть с маленькой буквы, нету ";" в конце строки, нету скобок 
+  var var1 = 25;  - не желательно в названии переменной использовать зарезервированные слова типа var
+  var var2 = 'Орехов'; - не желательно в названии переменной использовать зарезервированные слова типа var
+  alert (Вы нашли var1 var2) - нету ковычек в скобках, лишний пробел перед скобками, нету ";" в конце
+  var var3 = '45';
+  var var4 = 20;
+  console.log (var3+var4) - результат будет 4520, т.к одна переменная строка
+  */
+  
+  /*
+  Задание 2
+  var art = "25/5"; - string
+  var same = null; - object
+  var scoop; - undefined
+  var flag = 0; - number
+  var plat = true; - boolean
+  var devid = 34 / 7; - number
+  var person = {lastname: Ivan} - object
+  var fruits = ['apple']; - object
+  var iceCream = function() { alert('Я люблю мороженое'); } - function
+*/
+
+    alert('Задание3');
+    var str = "JavaScript is a high-level, dynamic, untyped, and interpreted programming language",
+	str1 = "Netscape Communications realized that the Web needed to become more dynamic",
+	str2 = "JavaScript was realized in ten days";
+    alert( str.length );
+	alert( str1.length );
+	alert( str2.length );
+	
+	alert('Задание4');
+    var str = "console.log".toUpperCase(),
+	str1 = 'Hello World!'.toUpperCase(),
+	str2 = 'I need more code on JavaScript'.toUpperCase();
+    alert( str );
+	alert( str1 );
+	alert( str2 );
+	
+	alert('Задание5');
+    var str = "console.log".toLowerCase(),
+	str1 = 'Hello World!'.toLowerCase(),
+	str2 = 'I need more code on JavaScript'.toLowerCase();
+    alert( str );
+	alert( str1 );
+	alert( str2 );
+	
+	alert('Задание6');
+    var str = "console.log".charAt(0).toUpperCase() + "console.log".slice(1).toLowerCase(),
+	str1 = 'Hello World!'.charAt(0).toUpperCase() + 'Hello World!'.slice(1).toLowerCase(),
+	str2 = 'I need more code on JavaScript'.charAt(0).toUpperCase() + 'I need more code on JavaScript'.slice(1).toLowerCase();
+    alert( str );
+	alert( str1 );
+	alert( str2 );
+	
+	/*
+	Задание 7 (из методички)
+	var a = 1, b = 1, c, d;
+    c = ++a; alert(c); 2 - ++а увеличит переменную, а затем вернёт ее значение в с. Так что в с попадёт значение а ПОСЛЕ увеличения.
+    d = b++; alert(d); 1 - ++b увеличит переменную, а затем вернёт ее значение в d. Так что в d попадёт значение b ДО увеличения.
+    c = (2+ ++a); alert(c); 5 - на данные момент значение переменной а = 2, в данном выражении она еще раз инкрементируется и станет = 3. А 2 + 3 = 5
+    d = (2+ b++); alert(d); 4 - на данные момент значение переменной b = 2, в данном выражении она еще раз инкрементируется и станет = 3, НО к 2 прибавиться значение b до изменения. А 2 + 2 = 4
+    alert(a);  3 - изначально значение было равно 1, в процессе переменная была дважды инкрементирована, поэтому сейчас = 3
+    alert(b);  3 - изначально значение было равно 1, в процессе переменная была дважды инкрементирована, поэтому сейчас = 3
+	*/
+
+    alert('Задание8 из методиички');
+    var a = 2;
+    var x = 1 + (a *= 2);
+    alert(x);
+    //х = 5, т.к. выражение a *= 2  равносильно вот такому a = a * 2 и получается 1 + 2*2 = 5
+	
+	alert('Задание9 из методиички');
+	var a = +prompt('Введите значение а'), b = +prompt('Введите значение b'), result;
+    if (a >=0  && b >= 0)
+    {
+       result  = a - b;
+    }
+    else if (a < 0  && b < 0)
+    {
+	   result = a * b;
+    } 
+    else if ((a >= 0 && b < 0) || (b >= 0 && a < 0))
+    {
+	   result = a + b;
+    }
+    alert(result);
+	
+	alert('Задание10 из методиички');
+	var a = +prompt('Введите значение а от 0 до 15');
+    switch(a){
+    case 15:
+    break;
+    default:
+    while (a < 15){
+    a = a+1;
+    alert(a);}
+    }
+	
+	alert('Задание11 из методиички');
+	var x = +prompt('Введите значение х'), y = +prompt('Введите значение y');
+    function summation(x, y)
+    {
+       return (x + y);
+    }
+    sum = summation(x, y);
+    alert(sum);
+	
+	function subtraction(x, y)
+    {
+       return (x - y);
+    }
+    sub = subtraction(x, y);
+    alert(sub);
+	
+	function multiplication(x, y)
+    {
+       return (x * y);
+    }
+    mult = multiplication(x, y);
+    alert(mult);
+	
+	function division(x, y)
+    {
+       return (x / y);
+    }
+    div = division(x, y);
+    alert(div);
+	
+	alert('Задание12 из методиички');
+var arg1 = +prompt('Введите первый аргумент'), arg2 = +prompt('Введите второй аргумент'), operation = prompt('Введите наименование операции','' );
+function summation(arg1, arg2)
+    {
+       return (arg1 + arg2);
+    };
+ function division(arg1, arg2)
+    {
+      return (arg1/arg2);
+    };
+function subtraction(arg1, arg2)
+    {
+       return (arg1 - arg2);
+    };
+function multiplication(arg1, arg2)
+    {
+       return (arg1 * arg2);
+    };
+function mathOperation(arg1, arg2, operation){
+  switch(operation){
+    case 'сложение':
+    sum = summation(arg1, arg2);
+    alert(sum);
+    break;
+    case 'умножение':
+    mult = multiplication(arg1, arg2);
+    alert(mult);
+    break;
+    case 'вычитание':
+    sub = subtraction(arg1, arg2);
+    alert(sub);
+    break;
+    case 'деление':
+    div = division(arg1, arg2);
+    alert(div);
+    break;
+    default:
+    alert('Нет такой математической операции');}
+    };
+oper = mathOperation(arg1, arg2, operation);
+alert(oper);
+
+/*
+Задание13 из методиички
+alert( null > 0 ); // false
+alert( null == 0 ); // false
+alert(null >= 0); // true
+Алгоритмы проверки равенства == и сравнения >= > < <= работают по-разному. Сравнение честно приводит к числу, получается ноль. А при проверке равенства значения null и undefined обрабатываются особым образом: они равны друг другу, но не равны чему-то ещё.
+*/
+
+alert('Задание14 из методиички');
+var val = +prompt('Введите число'), pow = +prompt('Введите степень');
+function power(val, pow) {
+  if (pow != 1) {
+    return val * power(val, pow - 1);
+  } else {
+    return val;
+  }
+}
+alert( power(val, pow) );
+  </script>
+</body>
+
+</html>
