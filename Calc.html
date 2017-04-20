@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<HTML><HEAD>
+<META charset="utf-8">
+<STYLE>
+.NOBORDER {
+  BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px
+}
+
+.brd {
+  border: 4px double black;
+  background: white;
+  padding: 10px;
+  HEIGHT: 15px; 
+  WIDTH: 320px;
+}
+
+.brdTdTop {
+  BORDER-TOP: #000000 1px solid; 
+  HEIGHT: 15px; 
+  WIDTH: 35px; 
+  BORDER-BOTTOM: 0px; 
+}
+
+.brdTdBot {
+  BORDER-TOP: 0px; 
+  HEIGHT: 15px; 
+  WIDTH: 35px; 
+  BORDER-BOTTOM: #000000 1px solid; 
+}
+
+.brdTdIn {
+  BORDER-TOP: 0px; 
+  HEIGHT: 15px; 
+  WIDTH: 35px; 
+  BORDER-BOTTOM: 0px; 
+}
+</STYLE>
+
+<script>
+  function Sum(){
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+	var result = document.getElementById('result');
+	result.innerHTML = +num1 + +num2;
+  }
+  
+  function Sub(){
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+	var result = document.getElementById('result');
+	result.innerHTML = +num1 - +num2;
+  }
+  
+  function Div(){
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+	var result = document.getElementById('result');
+	result.innerHTML = +num1 / +num2;
+  }
+  
+  function Mult(){
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+	var result = document.getElementById('result');
+	result.innerHTML = +num1 * +num2;
+  }
+  
+  function Mod(){
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+	var result = document.getElementById('result');
+	result.innerHTML = +num1 % +num2;
+  }
+</script>
+</HEAD>
+
+<BODY>
+ <TABLE style="BORDER-COLLAPSE: collapse" cellSpacing=0 cols=12 cellPadding=1 border=0 bgcolor="#ffcc00">
+  <TBODY>
+   <TR class=brdTdTop>
+    <TD style="  BORDER-LEFT: #000000 1px solid;"></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD style="BORDER-RIGHT: #000000 1px solid"></TD></TR>
+   <TR class=brdTdIn>
+    <TD style="BORDER-LEFT: #000000 1px solid"></TD>
+    <TD rowSpan=2 colSpan=10><p class="brd" id="result" ></p></TD>
+    <TD style="BORDER-RIGHT: #000000 1px solid"></TD></TR>
+    <TR class=brdTdIn>
+    <TD style="BORDER-LEFT: #000000 1px solid"></TD>
+    <TD style="BORDER-RIGHT: #000000 1px solid"></TD></TR>
+    <TR class=brdTdIn>
+    <TD style="  BORDER-LEFT: #000000 1px solid;"></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD style="BORDER-RIGHT: #000000 1px solid"></TD></TR>
+   <TR>
+    <TD class=NOBORDER style="BORDER-TOP: 0px; HEIGHT: 15px; BORDER-RIGHT: 0px; WIDTH: 35px; BORDER-BOTTOM: 0px; BORDER-LEFT: #000000 1px solid"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 140px" colSpan=4><INPUT type="text" placeholder="Введите число" id="num1" style="HEIGHT: 22px; WIDTH: 115px" size=1/></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 140px" colSpan=4><INPUT type="text" placeholder="Введите число" id="num2"  style="HEIGHT: 22px; WIDTH: 115px" size=1/></TD>
+    <TD class=NOBORDER style="BORDER-TOP: 0px; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 35px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"></TD></TR>
+   <TR class=brdTdIn>
+    <TD style="  BORDER-LEFT: #000000 1px solid;"></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD style="BORDER-RIGHT: #000000 1px solid"></TD></TR>
+    <TD class=NOBORDER style="BORDER-TOP: 0px; HEIGHT: 15px; BORDER-RIGHT: 0px; WIDTH: 35px; BORDER-BOTTOM: 0px; BORDER-LEFT: #000000 1px solid"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"><button id="butSum" onClick="Sum()">+</button></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"><button id="butSub" onClick="Sub()">-</button></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"><button id="butDiv" onClick="Div()">/</button></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"><button id="butMult" onClick="Mult()">*</button></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"><button id="butMod" onClick="Mod()">Mod</button></TD>
+    <TD class=NOBORDER style="HEIGHT: 15px; WIDTH: 35px"></TD>
+    <TD class=NOBORDER style="BORDER-TOP: 0px; HEIGHT: 15px; BORDER-RIGHT: #000000 1px solid; WIDTH: 35px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px"></TD></TR>
+    <TR class=brdTdBot>
+    <TD style="  BORDER-LEFT: #000000 1px solid;"></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD style="BORDER-RIGHT: #000000 1px solid"></TD></TR>
+  </TBODY>
+ </TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<HTML><HEAD>
+<META charset="utf-8">
+</HEAD>
+<input type="text" placeholder="Введите число" id="num1"/>
+<button id="but" onClick="check()">Проверить</button>
+<p id="result"></p>
+
+<script>
+  function check(){
+    var num1 = document.getElementById('num1').value;
+	var result = document.getElementById('result');
+	var checkResult;
+	if(num1 > 0 && (num1 - Math.round(num1))==0){
+	checkResult = 'Число натуральное!';}
+    else {checkResult = 'Число НЕ натуральное!';} 	
+	result.innerHTML = checkResult;
+  }
+</script>
+</HTML>

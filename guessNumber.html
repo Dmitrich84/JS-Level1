@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<HTML><HEAD>
+<META charset="utf-8">
+<script>
+var count = 1;
+function getRandomArbitary(min, max)
+{
+	return Math.random() * (max - min) + min;
+}
+var number = Math.round(getRandomArbitary(1000, 9999));
+
+alert('Привет, давай поиграем!!');
+var value = prompt('Я загадал число, попробуй угадать какое!', 0);
+
+while (number != value) {
+count++;
+if (number < value) {
+value = prompt('Я загадал число меньше, попробуй еще раз! ', 0);
+} else {
+value = prompt('Я загадал число больше, попробуй еще раз! ', 0);}
+}
+if (number == value) {
+  alert( 'Урааа, ты победил!!! Число было угадано за ' + count + ' ходов');
+};
+</script>
