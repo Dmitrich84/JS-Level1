@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <h1>Домашнее задание к уроку 4</h1>
+</head>
+
+<body>
+
+  <script>
+    alert('Задание1');
+    var i=2;
+  nextPrime:
+    while (i<100) {
+     i++; 
+      for (var j = 2; j < i; j++) {
+       if (i % j == 0) continue nextPrime;}
+    console.log(i);
+  }
+	
+	alert('Задание2');
+    var i = 0;
+    do {
+     if(i % 2 == 0 && i != 0) {
+      alert(i + ' - четное число');
+     } else if (i == 0) {
+      alert(i + ' - это ноль ');}
+     else {alert(i + ' - нечетное число')};
+    i++;}
+    while (i <= 10);
+	
+	alert('Задание3');
+    var i = 0;
+    for (;;) {
+     alert( i );
+     i++;
+     if (i==10) break;}
+	
+	alert('Задание4');
+    var s = '';
+     for (var i = 1; i <= 20; i++){
+    	s += 'x';
+        console.log(s);}
+  </script>
+</body>
+
+</html>
