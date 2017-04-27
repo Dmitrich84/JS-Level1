@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<HTML><HEAD>
+<META charset="utf-8">
+</HEAD>
+<input type="text" placeholder="Введите начало диапазона" id="num1"/>
+<input type="text" placeholder="Введите конец диапазона" id="num2"/>
+<input type="text" placeholder="Введите шаг" id="num3"/>
+<button id="but2" onClick="startArray()">Вывести диапазон</button>
+<p id="rangeNums"></p>
+
+<script>
+	function range(startRange, finishRange, step){
+		var arrNums = Array();
+		if (startRange < finishRange){
+		for (;startRange<=finishRange; startRange+=step){
+			arrNums.push(startRange);
+        }
+		} else if (startRange > finishRange) {
+		for (;finishRange<=startRange; startRange-=step){
+			arrNums.push(startRange);
+		}
+		} else {
+		arrNums.push(startRange);
+		}
+		return arrNums;
+	}
+	function startArray(){
+		var num1 = document.getElementById('num1').value;
+		var num2 = document.getElementById('num2').value;
+		var num3 = document.getElementById('num3').value;
+		var rangeNums = document.getElementById('rangeNums');
+        rangeNums.innerHTML = range(+num1,+num2,+num3);
+	}	
+</script>
+</HTML>	
