@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<HTML><HEAD>
+<META charset="utf-8">
+</HEAD>
+<input type="text" placeholder="Введите число от 0 до 999" id="num1"/>
+<button id="but1" onClick="object()">Получить объект</button>
+<p id="obj"></p>
+
+<script>
+	function getObj(intNum){
+		var arrNum = [];
+		 if (isFinite(intNum) && intNum < 1000){
+		  for (let value of intNum) {
+		  arrNum.push(value);
+        }
+		 arrNum = arrNum.reverse();
+		 var obj = {
+			единицы: arrNum[0] || 0,
+		    десятки: arrNum[1] || 0,
+            сотни: arrNum[2] || 0
+		};
+		console.log(obj);
+		} else console.log('Вы не верно введи данные!!', obj={});
+		}
+    
+    function object(){
+        var num = document.getElementById('num1').value;
+		var obj = document.getElementById('obj');
+		getObj(num);  
+}
+</script>
+</HTML>
