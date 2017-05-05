@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<HTML><HEAD>
+<META charset="utf-8">
+</HEAD>
+<input type="text" placeholder="Введите натуральное число" id="num1"/>
+<button id="but1" onClick="startSum()">Вывести сумму</button>
+<p id="naturalSum"></p>
+<button onclick="recurs2()">Нечетные числа</button>
+<button onclick="recurs3()">Нечетные номера</button>
+<p id="oddNum"></p>
+<p id="oddNum1"></p>
+
+
+<script>
+
+function recurs(n){
+ if (n < 10) {
+   return n;}
+ else {return n%10 + recurs(Math.floor(n/10));}
+}
+
+function recurs2() {
+    var oddNum = document.getElementById('oddNum');
+    var n = +prompt('Введите число');
+    if (n > 0) {
+        if (n % 2 == 1) {
+            oddNum.innerHTML += n + ' ';
+        }
+        recurs2();
+	    } else {
+		if (n == 0) {
+	     return;}
+		recurs2();}
+}
+
+function recurs3() {
+    var oddNum1 = document.getElementById('oddNum1');
+    var n = +prompt('Введите число');
+    if (n > 0) {
+        var nOdd = +prompt('Введите число');
+		oddNum1.innerHTML += n + ' ';
+		if (nOdd > 0) {
+		    if (n == 0) {
+	     return;}
+            recurs3();
+	    }
+    }
+}
+function startSum(){
+        var num = document.getElementById('num1').value;
+		var naturalSum = document.getElementById('naturalSum');
+		naturalSum.innerText = recurs(+num); 
+}
+
+/* Задание из методички
+a.
+if (!( "a" in window )) {
+var a = 1;
+}
+alert ( a );  - вернет 1, т.к. в условии проверяется наличие свойства "а" в глобальном объекте - его нету, значит результат false,
+но там есть !(отрицание) и значит условие вернет true и значит переменной а присвоится 1,который и выведется.
+
+b.
+var b = function a ( x ) {
+x && a (-- x );
+};
+alert ( a ); - ничего не выведется, т.к а - не определена.
+
+c.
+function a ( x ) {
+return x * 2;
+}
+var a;
+alert ( a ); - выведет тело функции, т.к. нету скобок после а.
+
+d.
+function b ( x , y , a ) {
+arguments [ 2 ] = 10;
+alert ( a );
+}
+b ( 1 , 2 , 3 ); - выведет 10, т.к. хоть в функцию и передается значение переметра а = 3, но в функции при переборе параметров , параметру а 
+присвается значение 10 и СРАЗУ выводиться.
+
+e.
+function a () {
+alert ( this );
+}
+a . call ( null );  - выведет глобальный объект window, т.к. сразу идет выполнение функции, а метод call установит значение this 
+и это и будет объект window.*/
+
+</script>
+</HTML>
