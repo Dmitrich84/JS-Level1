@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<HTML><HEAD>
+<META charset="utf-8">
+</HEAD>
+<body>
+<script>
+function table(rows,cols, c1, c2, z){
+  var letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
+  var figureTop = ["Л", "К", "С", "КР", "Ф", "С", "К", "Л"];
+  var nums = ["8", "7", "6", "5", "4", "3", "2", "1"];
+  var table = document.createElement('TABLE');
+  var tr = document.createElement('TR');
+  var td = document.createElement('TD');
+	document.body.appendChild(table);
+    td.style.width = z+'px';
+	td.style.height = z+'px';
+  for(var i=0; i<rows; i++){
+    table.appendChild(tr.cloneNode(true));
+	for(var j=0; j<cols; j++){
+      var _tr = table.getElementsByTagName('TR')[i];
+      _tr.appendChild(td.cloneNode(true));
+	  var _td = table.getElementsByTagName('TR')[i].getElementsByTagName('TD')[j];
+		if((i%2==0 && j%2==0) || i%2==1 && j%2==1){
+			_td.style.backgroundColor = c2;
+			if((i==2 || i==7) && j!=8){
+			_td.innerText = 'П';
+			_td.style.color = 'white';
+			_td.style.textAlign = "center";
+			}
+			if (i == 1 || i == 8 && j != 8) {
+			_td.innerText = figureTop[j];
+			_td.style.color = 'white';
+			_td.style.textAlign = "center";
+			}}
+		else {
+			_td.style.backgroundColor = c1;
+			if((i==2 || i==7) && j!=8){
+			_td.innerText = 'П';
+			_td.style.color = 'black';
+			_td.style.textAlign = "center";
+			}
+			if (i == 1 || i == 8 && j != 8) {
+			_td.innerText = figureTop[j];
+			_td.style.color = 'black';
+			_td.style.textAlign = "center";
+			}
+			}
+		if (i == 0 && j != 8) {
+			_td.style.backgroundColor = 'white';
+			_td.innerText = letters[j];
+			_td.style.textAlign = "center";
+			}
+		if (i == 1 && j != 8) {
+			_td.style.borderTop = "2px solid black";
+			} 	
+		if (j == 8 && i != 9 && i > 0) {
+			_td.innerText = nums[i-1];
+			_td.style.backgroundColor = 'white';
+			_td.style.textAlign = "center";
+			}
+		else if (j == 8 && i != 9 && i == 0)
+			{_td.style.backgroundColor = 'white';}
+		if (j == 7 && i != 0) {
+			_td.style.borderRight = "2px solid black";
+			}
+		if (j == 0 && i != 9 && i > 0) {
+			_td.style.borderLeft = "2px solid black";
+			}
+		if (i == 8 && j != 8) {
+			_td.style.borderBottom = "2px solid black";
+			}
+		if (i == 0 && j != 8) {
+			_td.style.backgroundColor = 'white';
+			_td.innerText = letters[j];
+			_td.style.textAlign = "center";
+			}
+	}
+  }
+}
+table(9,9,'white','black', 30);
+</script>
+</body>
+</html>
